@@ -137,18 +137,17 @@ function tree() {
     
 }
 
-//function to place coniferous forest
-function splitF (key) {
-	var coordinates = new Array();
-	coordinates.push(key.split("&"));
-	return coordinates;
+function findCoor (key) {
+	var coor = new Array();
+	coor.push(key.split("&"));
+	return coor;
 }
 
 function foundTreePosition(xMaxLake,yMaxLake) {
-
+    
 	var position = new Array();
 	for(var k in pointsAltitudeZ) {
-			var coordinates = splitF(k);
+        var coordinates = findCoor(k);
 		if (coordinates[0][0]>xMaxLake && coordinates[0][1]> yMaxLake) {
 			var x = coordinates[0][0];
 			var y = coordinates[0][1];
@@ -158,7 +157,6 @@ function foundTreePosition(xMaxLake,yMaxLake) {
     }
     return position;
 }
-            
             
 var positions = foundTreePosition(xLake,yLake);
             
