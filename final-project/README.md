@@ -1,1 +1,1 @@
-To go in the final project page click [here](http://melix89.github.io)
+The final project page is [here](http://melix89.github.io)
